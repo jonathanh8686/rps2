@@ -21,7 +21,7 @@ function App() {
   const [serverGameState, setServerGameState] = useState({});
 
   useEffect(() => {
-		const newSocket = io(process.env.REACT_APP_SERVER_URL, {transports: ['websocket']})
+    const newSocket = io(process.env.REACT_APP_SERVER_URL, {transports: ['websocket']})
     setSocket(newSocket)
     return () => {
       newSocket.close()
